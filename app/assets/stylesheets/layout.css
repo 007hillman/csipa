@@ -83,6 +83,20 @@
 .justify-center{
     justify-content: center;
 }
+.scroll{
+    overflow: scroll;
+}
+.list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5em 3em 0.5em 0em;
+    border-top: 1px solid #3336;
+    border-bottom: 1px solid #3336;
+}
+.list + .list{
+    border-top: none;
+}
 @media all and (max-width : 480px ) {
     .grid-columns-2{
         grid-template-columns: repeat(1, 1fr);
