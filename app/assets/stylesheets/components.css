@@ -1,0 +1,85 @@
+.button , button
+{
+    padding: 0.5em 2em;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    background: transparent;
+}
+/* button sizes */
+.button.small
+{
+    font-size: 0.8em;
+}
+.button.medium
+{
+    font-size: 1.1em;
+}
+.button.large
+{
+    font-size: 1.5em;
+}
+/* types of button */
+.button.outline
+{
+    background: transparent;
+    color : aqua;
+    border: 2px solid #00dfc4;
+}
+form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input[type = "text"], textarea
+{
+    border: 1px rgba(255, 99, 71, 0.4) solid;
+    border-radius: 5px;
+    padding: 10px ;
+    width: 2fr;
+}
+input[type="text"]:focus, input[type = text]:valid , textarea:focus,
+textarea:valid
+{
+    border: 2px solid #00dfc4;
+    outline: none;
+}
+.field label{
+    position: absolute;
+    left : 30px ;
+    color : rgba(255, 99, 71, 0.4);
+    top: 8px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+.field{
+    position: relative;
+    transition: 0.5s;
+}
+.field > input:focus ~ label, .field > textarea:focus ~ label,
+.field > input:valid ~ label, .field > textarea:valid ~ label
+{
+    color: #00dfc4;
+    transform: translate(0px, -15px);
+    background-color: white;
+    border-left: 1px solid #00dfc4 ;
+    border-right: 1px solid #00dfc4 ;
+    padding: 0px 3px ;
+    border-radius: 3px;
+}
+.back-pic
+{
+    background-color: #fff;
+    background-image: url('show-book.jpg');
+    background-blend-mode:luminosity;
+    background-size: cover;
+    background-position: center;
+    transition: all ease-in-out 0.5s;
+}
+.back-pic:hover
+{
+    background-blend-mode:normal;
+    background-position: top right;
+}

@@ -1,0 +1,18 @@
+
+<section class="perso-grid grid-row-1 grid-columns-2 grid-fill">
+  <div class="back-pic ">
+
+  </div>
+
+  <div class="flex flex-column justify-center">
+    <p style="color: green"><%= notice %></p>
+
+    <%= render @subject %>
+    
+    <div >
+      <ion-icon name="arrow-undo-outline"></ion-icon><%= link_to "Back to subjects", subjects_path %> |
+      <ion-icon name="create-outline"></ion-icon><%= link_to "Edit this subject", edit_subject_path(@subject) %> |
+      <ion-icon name="trash-outline"></ion-icon><%= link_to "Destroy this subject", @subject, method: :delete , class: ""%>
+  </div>
+  </div>
+</section>
