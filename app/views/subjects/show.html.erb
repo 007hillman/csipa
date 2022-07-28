@@ -14,5 +14,17 @@
       <ion-icon name="create-outline"></ion-icon><%= link_to "Edit this subject", edit_subject_path(@subject) %> |
       <ion-icon name="trash-outline"></ion-icon><%= link_to "Destroy this subject", @subject, method: :delete , class: ""%>
   </div>
+  <br>
+  <%= link_to "New topic", new_topic_path(subject_id: @subject.id) %>
+    <% if @subject.topics.empty? %>
+      No topics created for this subject
+    <% else %>
+      <% @subject.topics.each do |topic|%>
+        <div class="list">
+          <p> <%= topic.topic_name %></p>
+          <%= link_to "view topic", topic%>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </section>
